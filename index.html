@@ -8,158 +8,166 @@
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
     <meta name="theme-color" content="#4285f4">
-    
+    <style>
+      .header {
+      padding: 40px;
+      text-align: center;
+      background: rgb(112, 146, 190);
+      color: white;
+      font-size: 15px;
+}
+    </style>
   </head>
   <body style= "background-color: lightblue">
     
 
-    <div style="background-color:blue;color:white;padding:2%;">This Document includes the steps to run the scripts in a virtual ubuntu
-      environment on a windows host operating system via VirtualBox.</div>
-
+    <div class="header">
+      <h3>
+        This document includes the steps to run the scripts in a virtual Ubuntu
+      environment on a Windows host operating system via VirtualBox.
+      </h3>
+    </div>
+    
     <h3>
-      Step 1: Install Virtualbox
+      Step 1: Install VirtualBox
     </h3>
     <m>
-      Virtual box is a tool which allows you to run different operating systems
+      VirtualBox is a tool which allows you to run different operating systems
       virtually on your host operating system. This is referred to as a virtual
       machine.
       <br />
       <ol>
         <li>
-          In order to install Virtualbox, follow this link: <br />
-          <a href="https://www.virtualbox.org/wiki/Downloads"
-            >https://www.virtualbox.org/wiki/Downloads</a
-          >
+          In order to install VirtualBox,
+          <a href="https://www.virtualbox.org/wiki/Downloads"> follow this link.</a>
         </li>
         <li>
-          Under “VirtualBox 6.1.28 platform packages” select the windows host
+          Under “VirtualBox 6.1.28 platform packages”, select the Windows host
           download link.
         </li>
-        <li>Open VirtualBox</li>
+        <li>Open VirtualBox.</li>
       </ol>
     </m>
 
     <h3>Step 2: Download Ubuntu ISO file</h3>
     <n>
-      For the purposes of this document I will be utilizing ubuntu 20.04,
+      For the purposes of this document I will be utilizing Ubuntu 20.04,
       although 18.04 is recommended.
       <br />
       <ol>
         <li>
-          Follow this link:
-          <br />
           <a href="https://ubuntu.com/#download"
-            >https://ubuntu.com/#download</a
+            >Follow this link.</a
           >
         </li>
-        <li>Under the Download button select 20.04 LTS</li>
+        <li>Under the "Download" button select "20.04 LTS".</li>
       </ol>
     </n>
 
-    <h3>Step 3: Set Up Ubuntu virtual machine in virtualbox</h3>
+    <h3>Step 3: Set Up Ubuntu virtual machine in VirtualBox</h3>
     <o>
       <ol>
-        <li>Open vitualbox</li>
-        <li>Click the "New" button</li>
+        <li>Open VirtualBox.</li>
+        <li>Click the "New" button.</li>
         <li>
           Provide the name of your new machine (I recommend the name Ubuntu
-          20.04)/li>
+          20.04).
         </li>
-        <li>Set Machine folder location (your choice)</li>
+        <li>Set Machine folder location (your choice).</li>
         <li>
           Ensure the Type and version fields are correct (Type: Linux ; Version:
-          Ubuntu(64-bit))
+          Ubuntu (64-bit)).
         </li>
-        <li>Select Next</li>
+        <li>Select "Next".</li>
         <li>
-          Select memory size (Anywhere inside the green area of the scale)
+          Select memory size (Anywhere inside the green area of the scale).
         </li>
-        <li>Select Next</li>
-        <li>Select “Create a virtual hard disk now”</li>
-        <li>Select Create</li>
-        <li>Select VDI(Virtual Disk Image)</li>
-        <li>Select Next</li>
+        <li>Select "Next".</li>
+        <li>Select “Create a virtual hard disk now”.</li>
+        <li>Select "Create".</li>
+        <li>Select "VDI" (Virtual Disk Image).</li>
+        <li>Select "Next".</li>
         <li>
-          Select Dynamically Allocated (Allows the OS to expand disk size if
-          required)
+          Select "Dynamically Allocated" (Allows the OS to expand disk size if
+          required).
         </li>
-        <li>Select Next</li>
-        <li>Choose File Location</li>
-        <li>Choose virtual Hard disk size(I recommend around 100Gb)</li>
-        <li>Click Create</li>
+        <li>Select "Next".</li>
+        <li>Choose "File Location".</li>
+        <li>Choose virtual hard disk size (I recommend around 100GB).</li>
+        <li>Click "Create".</li>
       </ol>
     </o>
 
-    <h3>Step 4: Configure Settings for Ubuntu Virtual Machine</h3>
+    <h3>Step 4: Configure Settings for Ubuntu virtual Machine</h3>
     <k>
       <ol>
-        <li>Select your machine</li>
-        <li>Select Settings</li>
+        <li>Select your machine.</li>
+        <li>Select "Settings".</li>
         <li>
-          Under General, click advanced settings. Select Bidirectional for both
+          Under "General", click "Advanced Settings". Select "Bidirectional" for both
           shared clipboard and drag and drop fields. This will allow you to
-          share files between host machine and ubuntu machine.
+          share files between host machine and Ubuntu machine.
         </li>
         <li>
-          Under System, click processor. Choose the number of CPUs you wish to
-          use. (if no preference leave as default)
+          Under "System", click "processor". Choose the number of CPUs you wish to
+          use (if no preference leave as default).
         </li>
         <li>
-          Under storage Click empty. Under attributes, by optical drive click
-          Disk dropdown and select choose a disk file. Provide location for ISO
+          Under "Storage", click "Empty". Under "Attributes", by optical drive click
+          Disk dropdown and choose a disk file. Provide location for ISO
           file downloaded in step 2.
         </li>
-        <li>Select OK.</li>
+        <li>Select "OK".</li>
       </ol>
     </k>
 
     <h3>Step 5: Open your virtual machine</h3>
       <ol>
         <li>Select your machine and press start.</li>
-        <li>Select preferred language and click install ubuntu</li>
-        <li>Select Keyboard Layout and Language, Click Continue</li>
+        <li>Select preferred language and click "Install Ubuntu".</li>
+        <li>Select "Keyboard Layout and Language", click "Continue".</li>
         <li>
-          Under “What apps would you like to start with?” Select normal
-          installation
+          Under “What apps would you like to start with?”, select "Normal
+          installation".
         </li>
         <li>
-          Under “Other Options” select download updates while installing ubuntu
-          and Install third party software for graphics and Wi-Fi hardware and
-          additional media formats
+          Under “Other Options”, select download updates while installing Ubuntu.
+          Then install third party software for graphics and Wi-Fi hardware, and
+          additional media formats.
         </li>
-        <li>Click continue</li>
-        <li>Under Installation Type, Select Erase Disk and install ubuntu</li>
-        <li>Click Install Now</li>
-        <li>Click continue</li>
-        <li>Select your location</li>
-        <li>Enter your preferred Name, Username and Password</li>
-        <li>Click continue</li>
+        <li>Click "Continue".</li>
+        <li>Under "Installation Type", select "Erase Disk and install Ubuntu".</li>
+        <li>Click "Install Now".</li>
+        <li>Click "Continue".</li>
+        <li>Select your location.</li>
+        <li>Enter your preferred name, "Username" and "Password".</li>
+        <li>Click "Continue".</li>
         <li>Wait for installation to complete.</li>
-        <li>Click Restart Now.</li>
-        <li>Log in to the user you created</li>
+        <li>Click "Restart Now".</li>
+        <li>Log in to the user that you created.</li>
         <li>Follow Setup Instructions provided by the OS.</li>
       </ol>
 
-    <h3>Step 6: (Optional) Install Virtual Box Guest Additions</h3>
+    <h3>Step 6: (Optional) Install VirtualBox Guest Additions</h3>
     <j>
       <ol>
         <li>
-          This software will allow your virtualbox virtual machine to properly
-          maximize on your screen
+          This software will allow your VirtualBox virtual machine to properly
+          maximize on your screen.
         </li>
-        <li>Open Terminal</li>
+        <li>Open Terminal.</li>
         <li>
           Give command: sudo apt install build-essential dkms
-          linux-headers-$(uname -r)
+          linux-headers-$(uname -r).
         </li>
-        <li>Provide your password</li>
-        <li>Enter y, press enter</li>
-        <li>Close terminal</li>
-        <li>Select devices on virtualbox window</li>
-        <li>Select Insert Guest additions CD Image</li>
-        <li>Select Run</li>
-        <li>Provide your password, click authenticate</li>
-        <li>Restart ubuntu operating system</li>
+        <li>Provide your password.</li>
+        <li>Enter "y", press enter.</li>
+        <li>Close Terminal.</li>
+        <li>Select "devices" on VirtualBox window.</li>
+        <li>Select "Insert Guest additions CD Image".</li>
+        <li>Select "Run".</li>
+        <li>Provide your password, click "Authenticate".</li>
+        <li>Restart Ubuntu operating system.</li>
       </ol>
     </j>
   </body>
